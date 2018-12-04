@@ -32,7 +32,7 @@ Cat.create({
     age: 15,
     temperament: "Bland"
 }, function(err, cat) {
-    if(err) {
+    if (err) {
         console.log(err);
     } else {
         console.log(cat);
