@@ -10,13 +10,14 @@ mongoose.connect('mongodb://localhost:27017/auth_demo_app', { useNewUrlParser: t
 var app = express();
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
+
 app.use(require("express-session")({
     secret: "Rusty is the best and cutest dog in the world",
     resave: false,
     saveUninitialized: false
 }));
 
-//use passport
+//use passport and session
 app.use(passport.initialize());
 app.use(passport.session());
 
